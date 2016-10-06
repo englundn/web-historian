@@ -1,7 +1,7 @@
 var fs = require('fs');
 var path = require('path');
 var _ = require('underscore');
-
+var http = require('http');
 /*
  * You will need to reuse the same paths many times over in the course of this sprint.
  * Consider using the `paths` object below to store frequently used file paths. This way,
@@ -25,17 +25,46 @@ exports.initialize = function(pathsObj) {
 // The following function names are provided to you to suggest how you might
 // modularize your code. Keep it clean!
 
-exports.readListOfUrls = function() {
+exports.readListOfUrls = function(cb) {
+  fs.readFile(exports.paths.list, (err, data) => {
+    if (err) { throw err; }
+    cb(data.toString().split('\n'));
+  });
 };
 
-exports.isUrlInList = function() {
+exports.isUrlInList = function(url, cb) {
+  exports.readListOfUrls((urlArray) => {
+    cb(urlArray.indexOf(url) > -1);
+  });
 };
 
-exports.addUrlToList = function() {
+exports.addUrlToList = function(url, cb) {
+  fs.appendFile(exports.paths.list, url + '\n', (err) => {
+    if (err) {
+      throw err;
+    } else {
+      cb();
+    }
+  });
 };
 
-exports.isUrlArchived = function() {
+exports.isUrlArchived = function(url, cb) {
+  cb(fs.existsSync(exports.paths.archivedSites + '/' + url));
+  
 };
 
-exports.downloadUrls = function() {
+exports.downloadUrls = function(urls) {
+  for (url of urls) {
+    var body = '';
+    http.get('http://' + url, (res) => {
+      res.on('data', function(chunk) {
+        body += chunk;
+      });
+      res.on('end', function() {
+        fs.writeFile(exports.paths.archivedSites + '/' + url, body, (err) => {
+          if (err) { throw err; }
+        });
+      });
+    });
+  }
 };

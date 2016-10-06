@@ -5,6 +5,7 @@ var archive = require('../helpers/archive-helpers');
 var path = require('path');
 var supertest = require('supertest');
 var initialize = require('../web/initialize.js');
+var htmlfetcher = require('../workers/htmlfetcher');
 
 initialize(path.join(__dirname, '/testdata'));
 
@@ -142,7 +143,7 @@ describe('archive helpers', function() {
     });
   });
 
-  describe('#downloadUrls', function () {
+  xdescribe('#downloadUrls', function () {
     it('should download all pending urls in the list', function (done) {
       var urlArray = ['www.example.com', 'www.google.com'];
       archive.downloadUrls(urlArray);
@@ -154,5 +155,26 @@ describe('archive helpers', function() {
       }, 500);
     });
   });
+
+  describe('htmlfetcher', function () {
+    it('should download all pending urls in the list', function (done) {
+      fs.writeFile(archive.paths.list, 'www.yahoo.com\nwww.ratemypoo.com', () => {
+        //console.log('read list is ', archive.readListOfUrls((pooparray) => { return pooparray; } ));
+        var urlArray = ['www.example.com', 'www.google.com', 'www.ratemypoo.com', 'www.yahoo.com'];
+        htmlfetcher.htmlfetcher();
+        // console.log('contents of folder is ', fs.readdirSync(archive.paths.archivedSites));
+        // console.log('read list is ', archive.readListOfUrls((pooparray) => { return pooparray; } ));
+
+        // Ugly hack to wait for all downloads to finish.
+        setTimeout(function () {
+          expect(fs.readdirSync(archive.paths.archivedSites)).to.deep.equal(urlArray);
+          done();
+        }, 500);
+      });
+    });
+  });
+
+
+
 });
 

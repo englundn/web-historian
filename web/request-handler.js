@@ -9,25 +9,13 @@ exports.handleRequest = function (req, res) {
   var statusCode = 404;
   if (req.method === 'GET') {
     var header = httpHelpers.headers;
-
     var pageContents;
     if (req.url === '/') {
       pageContents = '<input>';
       res.writeHead(200, header);
       res.end('<input>');
     } else {
-      fs.readFile(archive.paths.archivedSites + '/' + req.url, 'utf8', (err, data) => {
-        if (err) {
-          res.writeHead(statusCode, header);
-          res.end();
-          //throw err;
-        }
-        if (data) {
-          statusCode = 200;
-        }
-        res.writeHead(statusCode, header);
-        res.end(data, 'utf8');
-      });
+      httpHelpers.serveAssets(res, archive.paths.archivedSites + req.url, req.method);
     } 
 
   } else if (req.method === 'POST') {
@@ -36,9 +24,22 @@ exports.handleRequest = function (req, res) {
       collectData += data;
     });
     req.on('end', function() {
-      res.writeHead(302, header);
-      archive.addUrlToList(collectData.slice(4));
-      res.end('mission accomplished');
+      var pageUrl = collectData.slice(4);
+      archive.isUrlArchived(collectData, (isArchived) => {
+        if (isArchived) {
+          console.log('is archived');
+          httpHelpers.serveAssets(res, archive.paths.archivedSites + '/' + pageUrl, req.method);
+        } else {
+          console.log('not archived');
+          archive.isUrlInList(collectData, (inList) => {
+            if (!inList) {
+              console.log('is not in list');
+              archive.addUrlToList(pageUrl, () => {});
+            }
+            httpHelpers.serveAssets(res, archive.paths.siteAssets + '/loading.html', req.method);
+          });
+        }
+      });
     });
   }
   

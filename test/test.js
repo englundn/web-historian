@@ -143,7 +143,7 @@ describe('archive helpers', function() {
     });
   });
 
-  xdescribe('#downloadUrls', function () {
+  describe('#downloadUrls', function () {
     it('should download all pending urls in the list', function (done) {
       var urlArray = ['www.example.com', 'www.google.com'];
       archive.downloadUrls(urlArray);
@@ -156,7 +156,7 @@ describe('archive helpers', function() {
     });
   });
 
-  describe('htmlfetcher', function () {
+  xdescribe('htmlfetcher', function () {
     it('should download all pending urls in the list', function (done) {
       fs.writeFile(archive.paths.list, 'www.yahoo.com\nwww.ratemypoo.com', () => {
         //console.log('read list is ', archive.readListOfUrls((pooparray) => { return pooparray; } ));

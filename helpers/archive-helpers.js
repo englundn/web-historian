@@ -55,19 +55,15 @@ exports.isUrlArchived = function(url, cb) {
 };
 
 exports.downloadUrls = function(urls) {
-  for (url of urls) {
-    request('http://' + url, 'utf8', function(error, response, body) {
-      console.log('error ', error, 'status code is ', response.statusCode);
-      // res.on('data', function(chunk) {
-      //   body += chunk;
-      // });
-      //res.on('end', function() {
+  if (urls.length) {
+
+    request('http://' + urls[0], 'utf8', function(error, response, body) {
       if (!error && response.statusCode === 200) {
-        fs.writeFile(exports.paths.archivedSites + '/' + url, body, (err) => {
+        fs.writeFile(exports.paths.archivedSites + '/' + urls[0], body, (err) => {
           if (err) { throw err; }
         });
       }
-      //});
+      exports.downloadUrls(urls.slice(1));
     });
   }
 };

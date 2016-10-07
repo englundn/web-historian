@@ -14,6 +14,5 @@ if (module.parent) {
   module.exports = server;
 } else {
   server.listen(port, ip);
-  console.log('Listening on http://' + ip + ':' + port);
 }
 

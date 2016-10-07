@@ -1,0 +1,312 @@
+Current time is: Thu Oct 06 2016 15:09:13 GMT-0700 (PDT)
+Current time is: Thu Oct 06 2016 15:09:38 GMT-0700 (PDT)
+inside htmlfetcher
+Current time is: Thu Oct 06 2016 15:10:28 GMT-0700 (PDT)
+inside htmlfetcher
+Current time is: Thu Oct 06 2016 15:11:29 GMT-0700 (PDT)
+inside htmlfetcher
+www.google.com
+is archived is false
+www.yahoo.com
+is archived is false
+
+is archived is true
+www.google.com,www.yahoo.com
+Current time is: Thu Oct 06 2016 15:13:13 GMT-0700 (PDT)
+inside htmlfetcher
+www.google.com
+is archived is false
+www.yahoo.com
+is archived is false
+
+is archived is true
+object
+Current time is: Thu Oct 06 2016 15:13:36 GMT-0700 (PDT)
+inside htmlfetcher
+www.google.com
+is archived is false
+www.yahoo.com
+is archived is false
+
+is archived is true
+true
+Current time is: Thu Oct 06 2016 15:18:02 GMT-0700 (PDT)
+inside htmlfetcher
+www.google.com
+is archived is false
+www.yahoo.com
+is archived is false
+
+is archived is true
+true
+Current time is: Thu Oct 06 2016 15:18:19 GMT-0700 (PDT)
+inside htmlfetcher
+www.google.com
+is archived is false
+www.yahoo.com
+is archived is false
+
+is archived is true
+true
+Current time is: Thu Oct 06 2016 15:18:49 GMT-0700 (PDT)
+inside htmlfetcher
+www.google.com
+is archived is false
+www.yahoo.com
+is archived is true
+
+is archived is true
+true
+Current time is: Thu Oct 06 2016 15:19:22 GMT-0700 (PDT)
+inside htmlfetcher
+www.google.com
+is archived is true
+www.yahoo.com
+is archived is true
+
+is archived is true
+true
+Current time is: Thu Oct 06 2016 16:23:55 GMT-0700 (PDT)
+inside htmlfetcher
+amazon.com
+is archived is true
+www.facebook.com
+is archived is false
+yahoo.com
+is archived is false
+
+is archived is true
+true
+Current time is: Thu Oct 06 2016 16:27:11 GMT-0700 (PDT)
+inside htmlfetcher
+amazon.com
+is archived is true
+www.facebook.com
+is archived is true
+yahoo.com
+is archived is true
+reddit.com
+is archived is false
+
+is archived is true
+true
+Current time is: Thu Oct 06 2016 16:33:19 GMT-0700 (PDT)
+inside htmlfetcher
+amazon.com
+is archived is true
+www.facebook.com
+is archived is true
+yahoo.com
+is archived is false
+reddit.com
+is archived is true
+
+is archived is true
+true
+Current time is: Thu Oct 06 2016 16:34:46 GMT-0700 (PDT)
+inside htmlfetcher
+amazon.com
+is archived is false
+www.facebook.com
+is archived is false
+yahoo.com
+is archived is false
+reddit.com
+is archived is false
+
+is archived is true
+true
+Current time is: Thu Oct 06 2016 16:35:52 GMT-0700 (PDT)
+inside htmlfetcher
+amazon.com
+is archived is false
+www.facebook.com
+is archived is false
+yahoo.com
+is archived is true
+reddit.com
+is archived is true
+
+is archived is true
+true
+Current time is: Thu Oct 06 2016 16:36:27 GMT-0700 (PDT)
+inside htmlfetcher
+amazon.com
+is archived is true
+www.facebook.com
+is archived is true
+yahoo.com
+is archived is false
+reddit.com
+is archived is true
+
+is archived is true
+true
+Current time is: Thu Oct 06 2016 16:38:43 GMT-0700 (PDT)
+inside htmlfetcher
+amazon.com
+is archived is true
+www.facebook.com
+is archived is true
+yahoo.com
+is archived is true
+reddit.com
+is archived is true
+www.hackreactor.com
+is archived is false
+
+is archived is true
+true
+Current time is: Thu Oct 06 2016 16:38:46 GMT-0700 (PDT)
+inside htmlfetcher
+amazon.com
+is archived is true
+www.facebook.com
+is archived is true
+yahoo.com
+is archived is true
+reddit.com
+is archived is true
+www.hackreactor.com
+is archived is false
+
+is archived is true
+true
+Current time is: Thu Oct 06 2016 16:39:10 GMT-0700 (PDT)
+inside htmlfetcher
+amazon.com
+is archived is true
+www.facebook.com
+is archived is true
+yahoo.com
+is archived is true
+reddit.com
+is archived is true
+www.hackreactor.com
+is archived is false
+
+is archived is true
+true
+Current time is: Thu Oct 06 2016 16:41:45 GMT-0700 (PDT)
+inside htmlfetcher
+amazon.com
+is archived is true
+www.facebook.com
+is archived is true
+yahoo.com
+is archived is true
+reddit.com
+is archived is true
+www.hackreactor.com
+is archived is false
+
+is archived is true
+true
+Current time is: Thu Oct 06 2016 16:42:08 GMT-0700 (PDT)
+inside htmlfetcher
+amazon.com
+is archived is true
+www.facebook.com
+is archived is true
+yahoo.com
+is archived is true
+reddit.com
+is archived is true
+www.hackreactor.com
+is archived is false
+
+is archived is true
+true
+Current time is: Thu Oct 06 2016 16:43:49 GMT-0700 (PDT)
+inside htmlfetcher
+amazon.com
+is archived is true
+www.facebook.com
+is archived is true
+yahoo.com
+is archived is true
+reddit.com
+is archived is true
+www.hackreactor.com
+is archived is false
+
+is archived is true
+true
+Current time is: Thu Oct 06 2016 16:44:06 GMT-0700 (PDT)
+inside htmlfetcher
+amazon.com
+is archived is true
+www.facebook.com
+is archived is true
+yahoo.com
+is archived is true
+reddit.com
+is archived is true
+www.hackreactor.com
+is archived is false
+
+is archived is true
+true
+Current time is: Thu Oct 06 2016 16:54:17 GMT-0700 (PDT)
+inside htmlfetcher
+google.com
+is archived is false
+amazon.com
+is archived is true
+www.example.com
+is archived is true
+
+is archived is true
+true
+Current time is: Thu Oct 06 2016 16:55:10 GMT-0700 (PDT)
+inside htmlfetcher
+google.com
+is archived is true
+amazon.com
+is archived is true
+www.example.com
+is archived is true
+example.com
+is archived is false
+
+is archived is true
+true
+Current time is: Thu Oct 06 2016 16:56:47 GMT-0700 (PDT)
+inside htmlfetcher
+google.com
+is archived is false
+amazon.com
+is archived is false
+www.example.com
+is archived is false
+example.com
+is archived is false
+
+is archived is true
+true
+Current time is: Thu Oct 06 2016 16:57:20 GMT-0700 (PDT)
+inside htmlfetcher
+google.com
+is archived is false
+amazon.com
+is archived is false
+www.example.com
+is archived is true
+example.com
+is archived is true
+
+is archived is true
+true
+Current time is: Thu Oct 06 2016 16:57:43 GMT-0700 (PDT)
+inside htmlfetcher
+google.com
+is archived is false
+amazon.com
+is archived is true
+www.example.com
+is archived is true
+example.com
+is archived is true
+
+is archived is true
+true

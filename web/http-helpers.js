@@ -28,7 +28,7 @@ exports.serveAssets = function(res, url, method) {
     //   console.log('there is data');
     // }
     res.writeHead(statusCode, header);
-    res.end('<link rel="icon" href="data:;base64,iVBORw0KGgo=">' + data, 'utf8');
+    res.end('<link rel="icon" href="data:;base64,iVBORw0KGgo=">' + data);
   });
 };
 

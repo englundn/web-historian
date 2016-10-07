@@ -25,22 +25,26 @@ exports.handleRequest = function (req, res) {
       collectData += data;
     });
     req.on('end', function() {
-      var pageUrl = collectData.slice(4);
-      archive.isUrlArchived(pageUrl, (isArchived) => {
-        if (isArchived) {
-          console.log('is archived');
-          httpHelpers.serveAssets(res, archive.paths.archivedSites + '/' + pageUrl, req.method);
-        } else {
-          console.log('not archived');
-          archive.isUrlInList(pageUrl, (inList) => {
-            if (!inList) {
-              console.log('is not in list ', pageUrl);
-              archive.addUrlToList(pageUrl, () => {});
-            }
-            httpHelpers.serveAssets(res, archive.paths.siteAssets + '/loading.html', req.method);
-          });
-        }
-      });
+      if (collectData.slice(0, 4) === 'url=') {
+        var pageUrl = collectData.slice(4);
+        archive.isUrlArchived(pageUrl, (isArchived) => {
+          if (isArchived) {
+            console.log('is archived');
+            httpHelpers.serveAssets(res, archive.paths.archivedSites + '/' + pageUrl, req.method);
+          } else {
+            console.log('not archived');
+            archive.isUrlInList(pageUrl, (inList) => {
+              if (!inList) {
+                console.log('is not in list ', pageUrl);
+                archive.addUrlToList(pageUrl, () => {});
+              }
+              httpHelpers.serveAssets(res, archive.paths.siteAssets + '/loading.html', req.method);
+            });
+          }
+        });
+      } else {
+        
+      }
     });
   }
   
